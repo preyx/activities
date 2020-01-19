@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS Grid</title>
+    <style>
+      .container {
+        width: 800px;
+        height: 800px;
+        background-color: yellow;
+        display: grid;
+        grid-template-rows: 1fr 10fr 1fr;
+        grid-template-columns: 4fr 1fr;
+        /* justify-items: center; */
+      }
+      .box {
+        width: 100%;
+        height: 100%;
+        background-color: darkred;
+        color: white;
+      }
+      header {
+        grid-column: 1 / span 2;
+      }
+      footer {
+        grid-column: 1 / span 2;
+      }
+      .title {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="title">My Heading</h1>
+      </header>
+      <section>
+        <h2>About Me</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia nulla
+          labore aliquid nemo sapiente asperiores maiores natus perferendis eos.
+          Sequi, quidem obcaecati? Et cum nihil, nostrum laboriosam beatae rem
+          nam?Ad cum, pariatur enim ea, quidem doloribus aut ut in eligendi,
+          distinctio quia vitae at iure. Voluptates sed molestias veritatis,
+          commodi ipsum iste modi et, soluta, laborum ab quos quod.
+        </p>
+      </section>
+      <aside>
+        <h2>Links</h2>
+        <ul>
+          <li>Link1</li>
+          <li>Link2</li>
+          <li>Link3</li>
+        </ul>
+      </aside>
+      <footer>
+        <h2 class="title">My Footer</h2>
+      </footer>
+    </div>
+  </body>
+</html>

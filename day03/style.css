@@ -1,0 +1,23 @@
+.btn {
+  border: 2px solid #000000;
+  border-radius: 12px;
+  background-color: #cc0000;
+  padding: 12px 24px;
+  margin: 12px;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.norm {
+  font-size: 24px;
+}
+
+.big {
+  font-size: 36px;
+}
+
+.small {
+  font-size: 12px;
+}
