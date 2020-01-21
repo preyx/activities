@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Java Practice</title>
+</head>
+<body>
+  <script>
+    let numA = parseInt(prompt('First number?'))
+    let oper = prompt('Operation? (A)dd (S)ubtract (M)ultiply (D)ivide')
+    let numB = parseInt(prompt('Second number?'))
+    let result = 0
+    switch (oper.charAt(0)) {
+      case 'A':
+      case 'a':
+      result = numA + numB
+      break
+      case 'S':
+      case 's':
+      result = numA - numB
+      break
+      case 'M':
+      case 'm':
+      result = numA * numB
+      break
+      case 'D':
+      case 'd':
+      result = numA / numB
+      break
+      default:
+      result = '* Operation input error! *'
+    }
+    alert('The result is: ' + result)
+  </script>
+</body>
+</html>
