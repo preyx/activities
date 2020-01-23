@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>My First Object</title>
+  </head>
+  <body>
+
+    <script>
+
+      var car = {
+        make: "Honda",
+        model: "Fit",
+        color: "Blue Raspberry",
+        mileage: 3000,
+        isWorking: true,
+
+        driveToWork () {
+
+          alert("Old Mileage: " + this.mileage);
+
+          this.mileage = this.mileage + 8;
+
+          alert("New mileage: " + this.mileage);
+        },
+
+        driveAroundWorld () {
+
+          alert("Old Mileage: " + this.mileage);
+
+          this.mileage = this.mileage + 24000;
+
+          alert("New Mileage: " + this.mileage);
+          alert("Car needs a tuneup!");
+
+          this.isWorking = false;
+        },
+
+        getTuneUp () {
+          alert("Car is ready to go!");
+          this.isWorking = true;
+        },
+
+        honk () {
+          alert("Honk! Honk!");
+        }
+      };
+
+
+      // How would we log...
+
+      // The car's make?
+      console.log(car.make)
+
+      // The car's model?
+      console.log(car.model)
+
+      // The car's mileage?
+      console.log(car.mileage)
+
+      // How would we run the car's driveToWork method?
+      car.driveToWork()
+
+      // How would we run the car's driveAroundWorld method?
+      car.driveAroundWorld()
+
+      // How would we run the getTuneUp method?
+      car.getTuneUp()
+
+    </script>
+    
+  </body>
+</html>
