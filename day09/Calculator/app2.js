@@ -1,22 +1,27 @@
+const clearCalc = (a = '') => {
+  numA = a
+  numB = ''
+  operator = ''
+  result = 0
+  complete = false
+  document.getElementById('first-number').textContent = a
+  document.getElementById('second-number').textContent = ''
+  document.getElementById('operator').textContent = ''
+  document.getElementById('result').textContent = ''
+}
+
 let numA = ''
 let numB = ''
 let operator = ''
 let result = 0
+let complete = false
 
 document.addEventListener('click', event => {
   const trueTarget = event.target.tagName === 'SPAN' ? event.target.parentNode : event.target
-
   switch (trueTarget.classList[2]) {
     case 'number':
-      if (result) {
-        numA = trueTarget.value
-        numB = ''
-        operator = ''
-        result = 0
-        document.getElementById('first-number').textContent = numA
-        document.getElementById('second-number').textContent = ''
-        document.getElementById('operator').textContent = ''
-        document.getElementById('result').textContent = ''
+      if (complete) {
+        clearCalc(trueTarget.value)
       } else if (!operator) {
         numA = numA.concat(trueTarget.value)
         document.getElementById('first-number').textContent = numA
@@ -26,18 +31,10 @@ document.addEventListener('click', event => {
       }
       break
     case 'operator':
-      if (result) {
-        numA = result.toString()
-        numB = ''
-        operator = ''
-        result = 0
-        document.getElementById('first-number').textContent = numA
-        document.getElementById('second-number').textContent = ''
-        document.getElementById('operator').textContent = ''
-        document.getElementById('result').textContent = ''
-      } else if (!numA) {
-        numA = '0'
-        document.getElementById('first-number').textContent = numA
+      if (complete && isFinite(result)) {
+        clearCalc(result.toString())
+      } else if (!isFinite(result) || !numA) {
+        clearCalc('0')
       }
       operator = trueTarget.value
       switch (operator) {
@@ -81,15 +78,9 @@ document.addEventListener('click', event => {
           result = Math.pow(parseInt(numA), parseInt(numB))
       }
       document.getElementById('result').textContent = result
+      complete = true
       break
     case 'clear':
-      numA = ''
-      numB = ''
-      operator = ''
-      result = 0
-      document.getElementById('first-number').textContent = ''
-      document.getElementById('second-number').textContent = ''
-      document.getElementById('operator').textContent = ''
-      document.getElementById('result').textContent = ''
+      clearCalc()
   }
 })
