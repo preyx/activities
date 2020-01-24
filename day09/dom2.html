@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Day 9 - DOM</title>
+</head>
+<body>
+  <h1 id="count">0</h1>
+  <button class="numBtn" value="1">1</button>
+  <button class="numBtn" value="2">2</button>
+  <button class="numBtn" value="3">3</button>
+  <button class="numBtn" value="4">4</button>
+  <button class="numBtn" value="5">5</button>
+  <script>
+    document.onkeyup = event => console.log(event)
+    let count = 0
+    document.addEventListener('click', event => {
+      if (event.target.className === 'numBtn') {
+        count += parseInt(event.target.value)
+        document.getElementById('count').textContent = count
+      }
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Day 9 - DOM</title>
+</head>
+<body>
+  <h1 id="myHeading"></h1>
+
+  <form>
+    <p>
+      <label for="email">Email:</label>
+      <input type="text" name="email" id="email" placeholder="johndoe@gmail.com">
+    </p>
+    <p>
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password">
+    </p>
+    <p><button id="submit">Submit</button></p>
+
+    <div id="formOut"></div>
+
+    <h1>Timer:</h1>
+    <h2 id="stopwatch">0</h2>
+  </form>
+
+  
+  <script>
+    const renderuser = x => {
+
+    }
+    let stopwatch = 0
+    setInterval(() => {
+      document.getElementById('stopwatch').textContent = `${++stopwatch}`
+    }, 1000);
+
+    let users = []
+    document.getElementById('myHeading').textContent = 'Hello World!'
+    document.getElementById('submit').addEventListener('click', function (event) {
+      event.preventDefault()
+      // console.log(document.getElementById('email').value)
+      // console.log(document.getElementById('password').value)
+      let user = {
+        email: document.getElementById('email').value,
+        password: document.getElementById('password').value
+      }
+      // console.log(user)
+      users.push(user)
+      // console.log(users)
+      document.getElementById('email').value = ''
+      document.getElementById('password').value = ''
+      document.getElementById('formOut').innerHTML += `<p>Email: ${user.email}, Password: ${user.password}</p>`
+    })
+  </script>
+</body>
+</html>
