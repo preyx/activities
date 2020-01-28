@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Greeting</title>
+</head>
+<body>
+  <h1 id="greeter"></h1>
+  <p>
+    Enter your name:
+  <input type="text" name="username" id="username" maxlength="16"><button type="submit" id="submit">Submit</button>
+  </p>
+  <script>
+    let username = localStorage.getItem('username') || ''
+    const updateDisplay = _ => {
+    if (username.length === 0) {
+      document.getElementById('greeter').textContent = `Hello! Please enter your name.`
+    } else {
+      document.getElementById('greeter').textContent = `Hello ${username}!`
+    }
+    }
+    document.getElementById('submit').addEventListener('click', (event) => {
+      event.preventDefault()
+      username = document.getElementById('username').value
+      localStorage.setItem('username', username)
+      updateDisplay()
+    })
+    updateDisplay()
+  </script>
+</body>
+</html>

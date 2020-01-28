@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Arrays and Vars 2</title>
+</head>
+<body>
+  <script>
+    let arr = [1,2,3,4,5]
+    // console.log(arr[0])  
+    // console.log(arr[1])  
+    // console.log(arr[2])  
+    // console.log(arr[3])  
+    // console.log(arr[4])  
+    arr.forEach(element => {
+      console.log(element)
+    })
+
+    let arr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    arr2.forEach(element => {
+      if (element % 2 === 0) {
+        console.log(`${element} is even!`)
+      } else {
+        console.log(`${element} is NOT even!`)
+      }
+    })
+
+    let users = ['John Doe', 'Jane Doe', 'Jack Doe', 'Jan Doe']
+
+    let userObjs = users.map((user, i) => {
+      return {
+        id: i,
+        name:user
+      }
+    })
+    console.log(userObjs)
+
+    let evenArr = arr2.filter(x => {
+      return !(x % 2)
+    })
+    console.log(evenArr)
+  </script>
+</body>
+</html>

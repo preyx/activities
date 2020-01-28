@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Arrays and Vars</title>
+</head>
+<body>
+  <button id="myBtn" value="5">Click Me!</button>
+  <script>
+    document.getElementById('myBtn').addEventListener('click', ({target:{value}}) => {
+      // console.log(target.value)
+    })
+
+    let arr = [1, 2, 3, 4, 5]
+    // let a = arr[0]
+    // let b = arr[1]
+    // let c = arr[2]
+    // let d = arr[3]
+    // let e = arr[4]
+    // console.log(a,b,c,d,e)
+    let [,,,,x] = arr // x = 5
+    let [a, b, ...rest]
+
+    let dog = {
+      name: 'Beef',
+      breed: 'Chihuahua',
+      age: 1
+    }
+    // let name = dog.name
+    // let breed = dog.breed
+    // let age = dog.age
+    let {name, breed, age} = dog // index names MUST match!
+    
+    let {name:dogName, breed:dogBreed, age:dogAge} = dog // assigns to other variable names
+  </script>
+</body>
+</html>

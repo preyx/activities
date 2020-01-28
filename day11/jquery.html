@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Jquery</title>
+</head>
+<body>
+  <!-- <h1 id="message"></h1> -->
+
+  <!-- <div id="buttons"></div> -->
+
+  <h1 id="count"></h1>
+  <button id="myBtn">Click Me</button>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    // $('#message').html('<Hello World!>')
+  
+    // let arr = [1, 2, 3, 4, 5]
+    // arr.forEach(x => {
+    //   $let numElem = $('<button>')
+    //     numEleme.text(x)
+    //     $('#buttons').append(numElem)
+    // })
+
+    let count = 0
+    $('#myBtn').on('click', () => {
+      count++
+      $('#count').text(count)
+    })
+  </script>
+</body>
+</html>
