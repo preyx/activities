@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ToDo List</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.0/dist/css/uikit.min.css" />
+  <style>
+    .incomplete {
+      color: black;
+    }
+
+    .complete {
+      color: green;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="uk-container">
+    <h1 class="uk-heading-small uk-heading-divider">ToDo List</h1>
+  <form>
+    <p>
+      <label for="item">Add Item:</label>
+      <input type="text" name="item" id="item" class="uk-input uk-form-width-medium uk-form-small">
+      <button id="addItem" class="uk-button uk-button-default uk-button-small">Add</button>
+    </p>
+  </form>
+  <ul id="items" class="uk-list uk-list-striped"></ul>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.0/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.0/dist/js/uikit-icons.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+
+</html>
