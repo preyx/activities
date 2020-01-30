@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+        <form>
+          <p>
+            <label for="title">Movie Title</label>
+            <input type="text" name="title" id="title">
+          </p>
+          <p>
+            <button class="btn waves-effect waves-light" id="searchMovie">Search Movie</button>
+          </p>
+        </form>
+    </div>
+    <div class="row">
+      <div id="movie" class="col s6">
+      </div>
+      <div class="col s6">
+        <div class="card">
+          <div class="card-content">
+            <h4>Watchlist:</h4>
+            <ul id="watchList"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    let watchList = []
+
+    const loadMovie = title => {
+      fetch(`http://www.omdbapi.com/?t=${title}&apikey=trilogy`)
+        .then(r => r.json())
+        .then(({ Title, Year, Director, Poster, Plot }) => {
+          document.getElementById('movie').innerHTML = `
+<div class="card">
+  <div class="card-image">
+    <img src="${Poster}" alt="${Title}">
+    <span class="card-title">${Title}</span>
+  </div>
+  <div class="card-content">
+    <h4>Directed by ${Director}</h4>
+    <h5>Year: ${Year}</h5>
+    <p>${Plot}</p>
+  </div>
+  <div class="card-action">
+    <button class="btn waves-effect waves-light addWatchlist" value="${Title}" id="addWatch">Add To Watchlist</button>
+  </div>
+</div>
+`
+        })
+        .catch(e => console.error(e))
+    }
+    
+    const displayWatch = _ => {
+      document.getElementById('watchList').innerHTML = ''
+      watchList.forEach(element => {
+        document.getElementById('watchList').innerHTML += `<li><a href="#">${element}</a></li>`
+      })
+    }
+
+    document.getElementById('searchMovie').addEventListener('click', event => {
+      event.preventDefault()
+      loadMovie (document.getElementById('title').value)
+    })
+
+    document.getElementById('movie').addEventListener('click', event => {
+      event.preventDefault()
+      if(event.target.id === 'addWatch' && !watchList.includes(event.target.value)) {
+        watchList.push(event.target.value)
+        console.log(watchList)
+        displayWatch()
+      }
+    })
+
+    document.getElementById('watchList').addEventListener('click', event => {
+      event.preventDefault()
+      console.log(event.target.text)
+      if(event.target.tagName === 'A') {
+        console.log('LETS GO')
+        loadMovie(event.target.text)
+      }
+      // if(event.target.tag)
+    })
+
+  </script>
+</body>
+
+</html>

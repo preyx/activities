@@ -5,23 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>OMDB 1</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/uikit@3.3.0/dist/css/uikit.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.0/dist/css/uikit.min.css"/>
+    <style>
+      .rating {
+        width: 72px;
+        height: 72px;
+      }
+      .icon-32 {
+        width: 32px;
+        height: 32px;
+      }
+    </style>
   </head>
   <body>
-    <div class="uk-container"><div class="uk-grid">
-      <div class="uk-card uk-card-default uk-width-auto">
-        <div class="uk-card-body">
-          <h3 class="uk-card-title" id="mTitle"></h3>
-          <p id="mYear"></p>
-        </div>
-        <div class="uk-card-media-bottom">
-          <img src="" alt="" id="mPoster"/>
-        </div>
+    <div class="uk-container">
+      <form class="uk-text-right">
+        <input class="uk-input uk-form-width-small" type="text" placeholder="Search Movies" id="mSearch" />
+        <button type="submit" class="uk-button uk-button-default" id="mSearchBtn">Search</button>
+      </form>
+      <h1 class="uk-heading-large uk-text-center uk-margin-remove" id="mTitle"></h1>
+      <h2 class="uk-heading-line uk-text-center uk-margin-remove"><span><span id="mYear"></span> - Rated <span id="mRate"></span></span></h2>
+      <p class="uk-text-center uk-margin-remove-top">Runtime: <span id="mRun"></span></p>
+      <img class="uk-align-left uk-margin-remove-adjacent" src="" alt="" id="mPoster"/>
+      <div class="uk-align-right uk-margin-remove-adjacent">
+        <div class="uk-card uk-card-default rating"><div class="uk-position-center uk-text-center"><img src="./rating_imdb.svg" alt="Internet Movie Database" class="icon-32" uk-svg><p class="uk-margin-remove" id="mRateImdb"></p></div></div>
+        <div class="uk-card uk-card-default uk-margin-top rating"><div class="uk-position-center uk-text-center"><img src="./rating_rt.svg" alt="Rotten Tomatoes" class="icon-32" uk-svg><p class="uk-margin-remove" id="mRateRt"></p></div></div>
+        <div class="uk-card uk-card-default uk-margin-top rating"><div class="uk-position-center uk-text-center"><img src="./rating_mc.svg" alt="Metacritic" class="icon-32" uk-svg><p class="uk-margin-remove" id="mRateMc"></p></div></div>
       </div>
-    </div></div>
+      <p id="mPlot"></p>
+      <p><strong>Director: </strong><span id="mDir"></span></p>
+      <p><strong>Writer: </strong><span id="mWri"></span></p>
+      <p><strong>Actors: </strong><span id="mAct"></span></p>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.0/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.0/dist/js/uikit-icons.min.js"></script>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
