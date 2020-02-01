@@ -1,0 +1,125 @@
+{
+  "response_code": 0,
+  "results": [
+    {
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "When Gmail first launched, how much storage did it provide for your email?",
+      "correct_answer": "1GB",
+      "incorrect_answers": [
+        "512MB",
+        "5GB",
+        "Unlimited"
+      ]
+    },
+    {
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "The programming language &#039;Swift&#039; was created to replace what other programming language?",
+      "correct_answer": "Objective-C",
+      "incorrect_answers": [
+        "C#",
+        "Ruby",
+        "C++"
+      ]
+    },
+    {
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "How many Hz does the video standard PAL support?",
+      "correct_answer": "50",
+      "incorrect_answers": [
+        "59",
+        "60",
+        "25"
+      ]
+    },
+    {
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Nvidia&#039;s headquarters are based in which Silicon Valley city?",
+      "correct_answer": "Santa Clara",
+      "incorrect_answers": [
+        "Palo Alto",
+        "Cupertino",
+        "Mountain View"
+      ]
+    },
+    {
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "How many kilobytes in one gigabyte?",
+      "correct_answer": "1000000",
+      "incorrect_answers": [
+        "1024",
+        "1000",
+        "1048576"
+      ]
+    },
+    {
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "On Twitter, what is the character limit for a Tweet?",
+      "correct_answer": "140",
+      "incorrect_answers": [
+        "120",
+        "160",
+        "100"
+      ]
+    },
+    {
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": ".at is the top-level domain for what country?",
+      "correct_answer": "Austria",
+      "incorrect_answers": [
+        "Argentina",
+        "Australia",
+        "Angola"
+      ]
+    },
+    {
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "Which data structure does FILO apply to?",
+      "correct_answer": "Stack",
+      "incorrect_answers": [
+        "Queue",
+        "Heap",
+        "Tree"
+      ]
+    },
+    {
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "America Online (AOL) started out as which of these online service providers?",
+      "correct_answer": "Quantum Link",
+      "incorrect_answers": [
+        "CompuServe",
+        "Prodigy",
+        "GEnie"
+      ]
+    },
+    {
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "What was the first company to use the term &quot;Golden Master&quot;?",
+      "correct_answer": "Apple",
+      "incorrect_answers": [
+        "IBM",
+        "Microsoft",
+        "Google"
+      ]
+    }
+  ]
+}
