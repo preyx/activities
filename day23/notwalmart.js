@@ -36,7 +36,8 @@ const Food2 = (name, category, price, quantity, calories, fat, carbs, protein) =
   calories,
   fat,
   carbs,
-  protein
+  protein,
+  eat () { console.log('eaten!') }
 })
 
 const Drink2 = (name, category, price, quantity, calories, carbs, size) => ({

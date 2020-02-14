@@ -1,0 +1,16 @@
+{
+  "name": "day24",
+  "version": "1.0.0",
+  "description": "",
+  "main": "jest.js",
+  "dependencies": {
+    "jest": "^25.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
