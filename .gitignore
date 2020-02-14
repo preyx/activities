@@ -1,3 +1,5 @@
 **/node_modules/
+**/.DS_Store
+.vscode/
 bcgrp1-trivia/
 day22/bc-day22-mini/
