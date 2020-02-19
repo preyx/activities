@@ -1,9 +1,9 @@
 const express = require('express')
 const app = express()
 
-app.get('/hotdog', (req, res) => { 
-  // res.status(500)
+app.get('/hotdog', (req, res) => {
   // res.json({name:'John Doe'})
+  // res.sendStatus(418)
   // console.log(req.query)
   res.send('Hello!')
 })
