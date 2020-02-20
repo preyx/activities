@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Cheese",
+    "calories": 100,
+    "fat": 100,
+    "protein": 100
+  },
+  {
+    "name": "Chicken",
+    "calroies": 100,
+    "fat": 100,
+    "protein": 100
+  }
+]

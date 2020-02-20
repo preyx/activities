@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+  <script>
+    const renderFridge = _ => {
+      axios.get('/fridge')
+        .then(({ data: fridge }) => {
+          document.getElementById('display').innerHTML = ''
+          fridge.forEach(food => {
+            let foodElem = document.createElement('div')
+            foodElem.innerHTML = `
+<h3>${food.name}</h3>
+<p>Calories: ${food.calories}</p>
+<p>Fat: ${food.fat}</p>
+<p>Protein: ${food.protein}</p>
+`
+          })
+        })
+    }
+
+    displayFridge()
+  </script>
+</body>
+
+</html>
