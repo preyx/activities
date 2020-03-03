@@ -1,0 +1,18 @@
+DROP DATABASE IF EXISTS todo_db;
+
+CREATE DATABASE todo_db;
+
+USE todo_db;
+
+CREATE TABLE users (
+  userid INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  username VARCHAR(30) NOT NULL UNIQUE
+);
+
+CREATE TABLE items (
+  itemid INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  item VARCHAR(50) NOT NULL,
+  isDone BOOL NOT NULL,
+  userid INT NOT NULL,
+  FOREIGN KEY (userid) REFERENCES users(userid)
+);
